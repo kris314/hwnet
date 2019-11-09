@@ -3,11 +3,11 @@ Representation for Handwritten Word Images
 
 ## Installation
 The code is built using pytorch library. Following are the necessary packages to be installed:
-+ Python 3.5
++ Python 2.7
 + numpy, sklearn, nltk
 + opencv 3.2
 + PIL
-+ Pytorch 0.4.1 and torchvision
++ Pytorch 0.3.1 and torchvision
 + \<optional but desired\> CUDA 8.0 and CUDNN
 
 ### Pre-requisite data <default-locations>
