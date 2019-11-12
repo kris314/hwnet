@@ -70,7 +70,7 @@ Sample wordImages, annotation file and the query file is kept in its respective 
 If you are using the dataset, please cite the below arxiv paper:-
 - Praveen Krishnan and C.V. Jawahar, Generating Synthetic Data for Text Recognition, arXiv preprint arXiv:1608.04224, 2016.
 
-If you are comparing our method for word spotting/recognition, please cite the below relevant papers:-
+If you are comparing our method for word spotting, please cite the below relevant papers:-
 - Praveen Krishnan and C.V. Jawahar, HWNet v2: an efficient word image representation for handwritten documents, IJDAR 2019.
 - Praveen Krishnan and C.V. Jawahar, Matching Handwritten Document Images, ECCV 2016
 
