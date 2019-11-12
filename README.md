@@ -1,6 +1,9 @@
 # hwnet
 Representation for Handwritten Word Images
 
+## Dataset
+To download synthetic data and its annotation file, navigate to hwnet/iiit-hws/ and refer the README.md
+
 ## Installation
 The code is built using pytorch library. Following are the necessary packages to be installed:
 + Python 2.7
