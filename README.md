@@ -10,7 +10,8 @@ The code is built using pytorch library. Following are the necessary packages to
 + Pytorch 0.2 and torchvision
 + \<optional but desired\> CUDA 8.0 and CUDNN
 
-### Pre-requisite data <default-locations>
+### Computing image and text features for a new corpus of word images.
+#### Pre-requisite data <default-locations>
 + Image folder \<wordImages/\>: Containing word images for testing.
 + Test Annotation File \<ann/test_ann.txt\>: The file is given as the input for feature extraction. It has the following syntax in each line corresponding to each word image/string:<br>
 ```<word-img1-path><space><text1-string><space><dummyInt><space>1```<br>
@@ -20,8 +21,6 @@ The code is built using pytorch library. Following are the necessary packages to
   + IAM Model: http://ocr.iiit.ac.in/data/models/hwnet/pytorch/IAM/iam-model.t7
   + For other datasets, please refer to the location: hwnet/models/
 
-    
-### Computing image and text features for a new corpus of word images.
 ```
 cd pytorch
 python hwnet-feat.py --annFile ann/test_ann.txt --pretrained_file pretrained/iam-model.t7 --img_folder wordImages/ --testAug --exp_dir output/ --exp_id iam-test-0
@@ -40,8 +39,7 @@ There are other arguments in the code. Please keep the default setting for curre
 
 
 ### Evaluation of Query-By-Image Word Spotting
-
-### Pre-requisite data <default-locations>
+#### Pre-requisite data <default-locations>
 + Test Annotation File \<ann/test_ann.txt\>: The file same as described above.
 + Query File \<ann/test_query.txt>\: Query file containing the query indexes. Each index is an integer value which points to the query image from annFile. The syntax of this file is:
 ```1```<br>
