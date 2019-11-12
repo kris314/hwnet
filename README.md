@@ -37,7 +37,6 @@ Arguments for running above code:
 
 There are other arguments in the code. Please keep the default setting for current purpose.
 
-
 ### Evaluation of Query-By-Image Word Spotting
 #### Pre-requisite data <default-locations>
 + Test Annotation File \<ann/test_ann.txt\>: The file same as described above.
@@ -61,3 +60,5 @@ Arguments for running above code:
 + printFlag: Use this flag to print the retrival list.
 
 There are other arguments in the code. Please keep the default setting for current purpose.
+
+Sample wordImages, annotation file and the query file is kept in its respective folder location.
