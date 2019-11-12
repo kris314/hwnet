@@ -7,18 +7,18 @@ To download synthetic data and its annotation file, navigate to hwnet/iiit-hws/ 
 ## Installation
 The code is built using pytorch library. Following are the necessary packages to be installed:
 + Python 2.7
-+ numpy, sklearn, nltk
++ numpy, sklearn
 + opencv 2.4
 + PIL
 + Pytorch 0.2 and torchvision
 + \<optional but desired\> CUDA 8.0 and CUDNN
 
-### Computing image and text features for a new corpus of word images.
+### Computing image features for a new corpus of word images.
 #### Pre-requisite data <default-locations>
 + Image folder \<wordImages/\>: Containing word images for testing.
 + Test Annotation File \<ann/test_ann.txt\>: The file is given as the input for feature extraction. It has the following syntax in each line corresponding to each word image/string:<br>
-```<word-img1-path><space><text1-string><space><dummyInt><space>1```<br>
-```<word-img2-path><space><text2-string><space><dummyInt><space>1```<br>
+```<word-img1-path><space><dummyString><space><dummyInt><space>1```<br>
+```<word-img2-path><space><dummyString><space><dummyInt><space>1```<br>
 ...<br>
 + Pretrained Model \<pretrained/\>: Please download the pretrained model file for [IAM dataset](http://www.fki.inf.unibe.ch/databases/iam-handwriting-database) from below URL and store it in pretrained/iam-model.t7 location<br>
   + IAM Model: http://ocr.iiit.ac.in/data/models/hwnet/pytorch/IAM/iam-model.t7
@@ -42,12 +42,12 @@ There are other arguments in the code. Please keep the default setting for curre
 
 ### Evaluation of Query-By-Image Word Spotting
 #### Pre-requisite data <default-locations>
-+ Test Annotation File \<ann/test_ann.txt\>: The file same as described above.
-+ Query File \<ann/test_query.txt>\: Query file containing the query indexes. Each index is an integer value which points to the query image from annFile. The syntax of this file is:
++ Test Annotation File \<ann/test_ann.txt\>: The file syntax is same as described above, except the <dummyString> field should contain the actual unicode string/ground truth text associated with the corresponding word image. 
++ Query File \<ann/test_query.txt>\: Query file contains the query indexes. Each index is an integer value which points to the query image from annFile. The syntax of this file is:
 ```1```<br>
 ```3```<br>
 ...<br>
-Here images at location 1,3,... from file test_ann.txt will be used for querying.
+Here word images at location 1,3,... from file test_ann.txt will be used for querying.
 
 ```
 cd pytorch
