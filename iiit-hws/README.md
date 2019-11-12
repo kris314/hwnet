@@ -26,6 +26,7 @@ ReadMe for accessing IIIT-HWS dataset which comprises of handwritten synthetic w
 ## Ground Truth
 NOTE: In our ECCV paper, we have used a subset of IIIT-HWS dataset using only 10K vocabulary. The ground truth file for the same can obatined in IIIT-HWS-10K.txt file kept in the same directory. <br>
 The syntax of the ground truth file is as follows:
+
 ```<img1-path><space><text1-string><space><dummyInt><space><train/test flag>```<br>
 ```<img2-path><space><text2-string><space><dummyInt><space><train/test flag>```<br>
 ...<br>
