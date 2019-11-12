@@ -5,7 +5,7 @@ Representation for Handwritten Word Images
 The code is built using pytorch library. Following are the necessary packages to be installed:
 + Python 2.7
 + numpy, sklearn, nltk
-+ opencv 3.2
++ opencv 2.4
 + PIL
 + Pytorch 0.2 and torchvision
 + \<optional but desired\> CUDA 8.0 and CUDNN
