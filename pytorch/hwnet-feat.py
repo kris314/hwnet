@@ -20,7 +20,7 @@ import hwroidataset as hwROIDat
 parser = argparse.ArgumentParser(description='PyTorch HWNet Feature Extraction')
 
 parser.add_argument('--img_folder', default='/home/praveen.krishnan/Datasets/IAM/words/',help='image root folder')
-parser.add_argument('--test_vocab_file', default='/home/praveen.krishnan/Experiments/DeepLearning/handwritten/ann/IAM_Standard_Test_caseIns.txt',help='test IAM file')
+parser.add_argument('--annFile', default='/home/praveen.krishnan/Experiments/DeepLearning/handwritten/ann/IAM_Standard_Test_caseIns.txt',help='test IAM file')
 parser.add_argument('--exp_dir', default='/ssd_scratch/cvit/praveen.krishnan/Experiments/DeepLearning/handwritten/', help='output directory to save files')
 parser.add_argument('--batch_size', type=int, default=128, help='batch_size')
 parser.add_argument('--testAug',  action='store_true', default=False, help='perform test side augmentation')
@@ -65,7 +65,7 @@ else:
 tCntr=0
 for tSize in testFontSizes:
     #Dataset
-    testset = hwROIDat.HWRoiDataset(ann_file=args.test_vocab_file,
+    testset = hwROIDat.HWRoiDataset(ann_file=args.annFile,
                                         img_folder=args.img_folder,
                                         randFlag=False,
                                         valFlag = True,

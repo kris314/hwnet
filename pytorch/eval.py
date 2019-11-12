@@ -18,7 +18,7 @@ parser = argparse.ArgumentParser(description='PyTorch HWNet Evaluation for Word 
 parser.add_argument('--annFile', default='/home/praveen.krishnan/Experiments/DeepLearning/handwritten/ann/IAM_Standard_Test_caseIns.txt',help='test annotation file')
 parser.add_argument('--query_file', default='/home/praveen.krishnan/Experiments/DeepLearning/handwritten/ann/IAM_Standard_Test_caseIns_query.txt',help='test query file')
 parser.add_argument('--stopword_file', default='/home/praveen.krishnan/Experiments/DeepLearning/handwritten/ann/stopwords.txt',help='test query file')
-parser.add_argument('--exp_dir_local', default='/ssd_scratch/cvit/praveen.krishnan/Experiments/DeepLearning/handwritten/', help='root exp folder')
+parser.add_argument('--exp_dir', default='/ssd_scratch/cvit/praveen.krishnan/Experiments/DeepLearning/handwritten/', help='root exp folder')
 parser.add_argument('--exp_id', default='FeatExt-IAM', help='exp id')
 parser.add_argument('--printFlag',  action='store_true', default=False, help='to print out list in text files')
 parser.add_argument('--removeQuery',  action='store_true', default=False, help='seperate out query from candidate list. Only for Botany/Konz datasets')
@@ -28,9 +28,9 @@ args = parser.parse_args()
 print(args)
 
 
-featFolder = os.path.join(args.exp_dir_local , 'models' , args.exp_id)
-logs_dir = os.path.join(args.exp_dir_local,'logs',args.exp_id)
-ret_dir = os.path.join(args.exp_dir_local,'retrieval',args.exp_id)
+featFolder = os.path.join(args.exp_dir , 'models' , args.exp_id)
+logs_dir = os.path.join(args.exp_dir,'logs',args.exp_id)
+ret_dir = os.path.join(args.exp_dir,'retrieval',args.exp_id)
 
 if(not os.path.exists(featFolder)):
     os.makedirs(featFolder)

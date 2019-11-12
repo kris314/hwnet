@@ -22,7 +22,7 @@ The code is built using pytorch library. Following are the necessary packages to
     
 ### Computing image and text features for a new corpus of word images.
 ```
-python hwnet-feat.py --test_vocab_file ann/test_ann.txt --pretrained_file pretrained/iam-model.t7 --img_folder wordImages/ --testAug --exp_dir output/ --exp_id iam-test-0
+python hwnet-feat.py --annFile ann/test_ann.txt --pretrained_file pretrained/iam-model.t7 --img_folder wordImages/ --testAug --exp_dir output/ --exp_id iam-test-0
 ```
 The above code will compute features and save it numpy matrices in location ```output/models/iam-test-0/```. Here feats.npy will contain featues for word images in the order provided in annotation file. The dimension of the matrix would be Nx2048. Here 'N' is the number of word images and 2048 is the feature dimension for the current trained model.
   
