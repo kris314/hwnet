@@ -10,7 +10,6 @@ from sklearn.metrics import label_ranking_average_precision_score
 from sklearn.neighbors import KDTree
 import os
 import argparse
-from nltk.stem.porter import *
 
 import pdb
 parser = argparse.ArgumentParser(description='PyTorch HWNet Evaluation for Word Spotting')
