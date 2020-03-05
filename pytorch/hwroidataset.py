@@ -82,9 +82,13 @@ class HWRoiDataset(Dataset):
         newWidth = np.min((int(np.ceil(((w*1.0)/h) * fontsize)),384-1))
         image = cv2.resize(image,(newWidth,fontsize))
         newImage = np.ones((128,384),dtype=np.float32) * 255.0
-
-        rX = np.random.randint(0,384-newWidth)
-        rY = np.random.randint(0,128-64)
+        
+        if self.randFlag:
+            rX = np.random.randint(0,384-newWidth)
+            rY = np.random.randint(0,128-64)
+        else:
+            rX = 0
+            rY = 0
 
         newImage[rY:fontsize+rY, rX:newWidth+rX] = image
         cords = np.where(newImage!=255)
